@@ -40,8 +40,12 @@
 
           packages = {
             # Lets you run `nix run .` to start nixvim
-            default = nvim;
+            default = pkgs.buildEnv {
+              name = "nvim";
+              paths = [ nvim pkgs.xclip pkgs.ripgrep ]; # Add xclip and ripgrep here
+            };
           };
+          
         };
     };
 }
