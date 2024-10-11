@@ -17,6 +17,15 @@
     softtabstop = 2;
   };
 
+  extraConfigLua = ''
+      -- Add default mappings for 's' and 'S'
+      vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap-forward-to)')
+      vim.keymap.set({'n', 'x', 'o'}, 'S', '<Plug>(leap-backward-to)')
+
+      vim.keymap.set({'v'}, 's', '<Plug>(leap-forward-till)')
+      vim.keymap.set({'v'}, 'S', '<Plug>(leap-backward-till)')
+    '';
+
   # KEYMAPS
   keymaps = [
     # pasting from system clipboard
@@ -253,7 +262,7 @@
     # EDITING / NAVIGATION
     leap = {
       enable = true;
-      addDefaultMappings = true;
+      addDefaultMappings = false;
       highlightUnlabeledPhaseOneTargets = true;
     };
     yanky = {
