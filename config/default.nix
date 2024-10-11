@@ -194,6 +194,53 @@
       action = "<CMD>Trouble todo toggle<CR>";
       options = { desc = "[C]ode [t]odo toggle"; };
     }
+		# copilot
+		{
+			mode = "n";
+			key = "<leader>h";
+			action = "+copilot";
+			options = { desc = "Copilot [h]elp"; };
+		}
+		{
+			key = "<leader>hc";
+			action = "<cmd>CopilotChatToggle<CR>";
+			options = { desc = "Copilot [h]elp [c]hat"; };
+		}
+		{
+			key = "<leader>he";
+			action = "<cmd>CopilotChatExplain<CR>";
+			options = { desc = "Copilot [h]elp [e]xplain"; };
+		}
+		{
+			key = "<leader>hr";
+			action = "<cmd>CopilotChatReview<CR>";
+			options = { desc = "Copilot [h]elp [r]eview"; };
+		}
+		{
+			key = "<leader>hf";
+			action = "<cmd>CopilotChatFix<CR>";
+			options = { desc = "Copilot [h]elp [f]ix"; };
+		}
+		{
+			key = "<leader>ho";
+			action = "<cmd>CopilotChatOptimize<CR>";
+			options = { desc = "Copilot [h]elp [o]ptimize"; };
+		}
+		{
+			key = "<leader>hd";
+			action = "<cmd>CopilotChatDocs<CR>";
+			options = { desc = "Copilot [h]elp [d]ocs"; };
+		}
+		{
+			key = "<leader>ht";
+			action = "<cmd>CopilotChatTests<CR>";
+			options = { desc = "Copilot [h]elp [t]ests"; };
+		}
+		{
+			key = "<leader>hx";
+			action = "<cmd>CopilotChatFixDiagnostic<CR>";
+			options = { desc = "Copilot [h]elp [x] fix diagnostic"; };
+		}
 ];
 
 
@@ -346,6 +393,12 @@
           '';
       };
     };
+		copilot-vim = {
+			enable = true;
+		};
+		copilot-chat = {
+			enable = true;
+		};
     friendly-snippets.enable = true;
     luasnip.enable = true;
 
