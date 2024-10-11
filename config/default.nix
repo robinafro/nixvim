@@ -233,10 +233,10 @@
         updateRoot = false;
       };
       view = {
-        width = "30";
+        width = 40;
         side = "left";
       };
-      actions.openFile.resizeWindow = false;
+      actions.openFile.resizeWindow = true;
       modified.enable = true;
       tab.sync.open = true;
     };
