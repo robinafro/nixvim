@@ -8,8 +8,6 @@
   opts = {
     number = true;
 
-    clipboard = "unnamedplus";
-
     smarttab = true;
     expandtab = false; # Change to true to auto-convert tabs to spaces
     tabstop = 2;
