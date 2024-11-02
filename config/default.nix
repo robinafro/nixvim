@@ -167,6 +167,11 @@
       action = "+code";
       options = { desc = "[C]ode actions"; };
     }
+		{
+			key = "<leader>ca";
+			action = "<CMD>lua require('actions-preview').code_actions<CR>";
+			options = { desc = "[C]ode [a]ction"; };
+		}
     {
       key = "<leader>cf";
       action = "<CMD>lua vim.lsp.buf.format()<CR>";
@@ -457,11 +462,17 @@
             end
           '';
         formatters_by_ft = {
-					python = [ "isort" "black" "ruff_format" ];
+					python = [ "isort" "black" "ruff_fix" "ruff_format" ];
+					lua = [ "stylua" ];
+					javascript = [ "prettier" ];
+					typescript = [ "prettier" ];
+					html = [ "prettier" ];
+					css = [ "prettier" ];
+					nix = [ "nixfmt" ];
+					csharp = [ "omnisharp" ];
 				};
       };
     };
-    trouble.enable = true;
     render-markdown.enable = true;
   };
 }
