@@ -47,7 +47,13 @@
             # Lets you run `nix run .` to start nixvim
             default = pkgs.buildEnv {
               name = "nvim";
-              paths = [ nvim pkgs.wl-clipboard pkgs.ripgrep ]; # Add xclip and ripgrep here
+              paths = [ 
+								nvim 
+								pkgs.wl-clipboard 
+								pkgs.ripgrep 
+								pkgs.black
+								pkgs.isort
+							];
             };
           };
         };

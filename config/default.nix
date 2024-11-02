@@ -426,6 +426,7 @@
         lua-ls.enable = true;
         pyright.enable = true;
         ruff.enable = true;
+				ruff-lsp.enable = true;
         tsserver.enable = true;
         tailwindcss.enable = true;
         vuels.enable = true;
@@ -455,7 +456,9 @@
                 }
             end
           '';
-        formatters_by_ft = {};
+        formatters_by_ft = {
+					python = [ "isort" "black" "ruff_format" ];
+				};
       };
     };
     trouble.enable = true;
