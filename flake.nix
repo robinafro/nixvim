@@ -49,10 +49,7 @@
               name = "nvim";
               paths = [ 
 								nvim 
-								pkgs.wl-clipboard 
 								pkgs.ripgrep 
-								pkgs.black
-								pkgs.isort
 							];
             };
           };
