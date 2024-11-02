@@ -419,7 +419,7 @@
       servers = {
         arduino_language_server.enable = true;
         clangd.enable = true;
-        csharp_ls.enable = true;
+				omnisharp.enable = true;
         cssls.enable = true;
         emmet_ls.enable = true;
         html.enable = true;
